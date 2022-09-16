@@ -1,0 +1,24 @@
+@import "../../../common/styles/colors";
+@import "../../../common/styles/template";
+
+.exchange_rates {
+  flex-grow: 1;
+
+  background-color: $color-black;
+  .container {
+    @extend %container;
+
+    .exchange_rates_inner {
+      .exchange_rates_title{
+        margin-top: 15px;
+
+        color: $color-white;
+
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1.2em;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

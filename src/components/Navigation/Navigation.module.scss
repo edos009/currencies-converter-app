@@ -1,0 +1,13 @@
+@import "../../common/styles/colors";
+@import "../../common/styles/template";
+
+.nav{
+  margin-left: 50px;
+
+  color: $color-white;
+
+  &_list{
+    display: flex;
+    gap: 40px;
+  }
+}

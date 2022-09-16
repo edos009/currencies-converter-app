@@ -1,0 +1,9 @@
+@import "../../common/styles/colors";
+@import "../../common/styles/template";
+
+.logo {
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

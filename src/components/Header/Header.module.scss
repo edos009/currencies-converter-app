@@ -1,0 +1,23 @@
+@import "../../common/styles/colors";
+@import "../../common/styles/template";
+
+.header {
+  background-color: $color-black;
+
+  &_wrapper {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    background-color: $color-dark-grey;
+  }
+  .container {
+    @extend %container;
+
+    .header_inner {
+      display: flex;
+      align-items: center;
+
+      height: 70px;
+    }
+  }
+}
