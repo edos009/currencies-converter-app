@@ -1,0 +1,105 @@
+@import "../../common/styles/colors";
+@import "../../common/styles/template";
+
+.dropdown {
+  position: relative;
+
+  width: 150px;
+
+  &_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid $color-light-grey;
+    padding-bottom: 10px;
+
+    transition: border-color 0.45s ease;
+
+    &:hover {
+      border-bottom: 2px solid $color-white;
+    }
+
+    &:hover .arrow {
+      border-color: $color-white transparent transparent transparent;
+    }
+
+    &.dropdown_btn_active{
+      border-bottom: 2px solid $color-light-green;
+    }
+
+    &.dropdown_btn_active .arrow{
+      transform: rotate(180deg);
+    }
+
+    .text {
+      color: $color-white;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2em;
+      text-transform: uppercase;
+    }
+    .arrow {
+      width: 0;
+      height: 0;
+
+      border-style: solid;
+      border-width: 10px 7.5px 0 7.5px;
+      border-color: $color-light-grey transparent transparent transparent;
+
+      transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+      transform: none;
+    }
+  }
+
+  &_content {
+    content: "";
+    position: absolute;
+
+    max-width: 150px;
+    width: 100%;
+
+    top: 35px;
+
+    padding: 10px 0;
+    border-radius: 3px;
+
+    background-color: $color-grey;
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+
+    transition: all .3s ease-in-out;
+
+    &.dropdown_content_show{
+      opacity: 1;
+      visibility: visible;
+      transition: all .3s ease-in-out;
+    }
+
+    .dropdown_item {
+      padding: 10px 0 10px 5px;
+      margin-bottom: 5px;
+
+      color: $color-white;
+      background-color: transparent;
+
+      transition: background-color 0.45s ease;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2em;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $color-light-grey;
+      }
+
+      &_selected{
+        color: $color-light-green;
+      }
+    }
+  }
+}

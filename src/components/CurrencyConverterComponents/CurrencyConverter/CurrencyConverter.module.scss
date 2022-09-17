@@ -10,7 +10,7 @@
 
     .currency_converter_inner {
       .currency_converter_title{
-        margin-top: 15px;
+        margin: 15px 0;
 
         color: $color-white;
 
@@ -18,6 +18,21 @@
         font-size: 22px;
         line-height: 1.2em;
         text-transform: capitalize;
+      }
+
+      .currency_converter_container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .currency_converter_box{
+          width: 48%;
+
+          padding: 15px;
+          border-radius: 6px;
+
+          background-color: $color-dark-grey;
+        }
       }
     }
   }
